@@ -1,22 +1,11 @@
-from scraper import notebooks_list
 from fastapi import FastAPI
-import json
+from routers.router import router as api
 
+#Iniciar API
 
-app = FastAPI()
+def app_start():
+    app = FastAPI()
+    app.include_router(api)
+    return app
 
-
-@app.get(r"/bot")
-def start_bot():
-    notebooks_list()
-    return "Processo finalizado, acesse /bot/data para visualizar os resultados"
-
-
-@app.get("/bot/data")
-def results():
-
-    with open('data.json', 'r') as a:
-        data = json.load(a)
-    return data
-
-#uvicorn main:app --reload
+app = app_start

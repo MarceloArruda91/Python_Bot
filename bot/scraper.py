@@ -10,9 +10,9 @@ PATH = Service(r"C:\Chromedriver\chromedriver.exe")
 OPTIONS = Options()
 OPTIONS.headless = True
 OPTIONS.add_argument("window-size=1920x1080")
-DRIVER = webdriver.Chrome(service=PATH, options=OPTIONS)  # create driver
+DRIVER = webdriver.Chrome(service=PATH, options=OPTIONS)  # Create driver
 
-
+    # Iterar atraves da lista de notebooks e devolver o resultado filtrado em uma lista
 def notebook_links() -> list:
     #  START
     website = "https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"  # website
@@ -27,7 +27,7 @@ def notebook_links() -> list:
             links_list.append(link)
     return links_list
 
-
+    # Pegar todas as informacoes do notebook na pagina atual
 def notebook_info() -> list:
     notebook_list = []
     base_dict = {}
@@ -88,7 +88,7 @@ def notebook_info() -> list:
 
     return notebook_list
 
-
+    # Iterar atraves da lista de links e devolver a informacao de cada pagina de forma organizada em um json
 def notebooks_list() -> None:
     notebooks_json = []
 
@@ -101,5 +101,5 @@ def notebooks_list() -> None:
     # Organizar todos os notebooks em ordem decrescente em relação ao preço
     notebooks_sorted = sorted(notebooks_json, key=itemgetter("price"))
 
-    with open('data.json', 'w') as a:
+    with open('/files/data.json', 'w') as a:
         json.dump(notebooks_sorted, a)
