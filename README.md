@@ -7,7 +7,11 @@ Bot em selenium com o objetivo acessar [esse site](https://webscraper.io/test-si
 ```
 fastapi==0.70.0
 selenium==4.0.0
+
 ```
+
+Baixar o [chromedriver](https://chromedriver.chromium.org/downloads) da versão correta e por na pasta drive
+
 ## Funcionamento
 ```bash
 
