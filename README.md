@@ -1,6 +1,6 @@
 # Devnology_Test
 
-Bot em selenium com o objetivo acessar esse site e pegar todos notebooks Lenovo ordenando do mais barato para o mais caro. Pegar todos os dados disponíveis dos produtos.
+Bot em selenium com o objetivo acessar [esse site](https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops), pegar todos notebooks Lenovo ordenando do mais barato para o mais caro e pegar todos os dados disponíveis dos produtos.
 
 
 # Requisitos do bot:
